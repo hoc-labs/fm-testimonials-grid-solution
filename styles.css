@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+body {
+    background-color:   hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+html {
+    --moderate-violet-color: hsl(263, 55%, 52%);
+}
+main {
+    margin: 50px auto;
+    width: 80%;
+
+    display:grid;
+    grid-row-gap:20px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: 
+    "dan" 
+    "john" 
+    "jeanette" 
+    "kira" 
+    "patrick";
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+}
+
+.card-header img {
+    width:60px;
+    margin-right:10px;
+}
+
+.card-header .grad {
+    opacity:60%;
+}
+
+.dark-card {
+    color: #e4e9f1;
+}
+
+.dark-card p {
+    color: #abb0b8;
+}
+
+.light-card {
+    color: #707685;
+}
+
+.light-card p {
+    opacity: 60%;
+}
+
+img {
+    width: 38px;
+    border-radius: 50%;
+}
+
+.dan {
+    background-color:hsl(263, 55%, 52%);
+    grid-area: dan;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+}
+
+.john {
+    background-color:hsl(217, 19%, 35%);
+    grid-area: john;
+}
+
+.kira {
+    background-color:white;
+    grid-area: kira;
+}
+
+.jeanette {
+    background-color: white;
+    grid-area: jeanette;   
+}
+
+.patrick {
+    background-color:hsl(219, 29%, 14%);
+    grid-area: patrick;    
+}
+
+@media screen and (min-width: 600px)
+{
+    main{   
+        grid-template-columns: repeat(4,1fr);
+        grid-gap:20px;
+        grid-template-areas: 
+        "dan dan john kira" 
+        "jeanette patrick patrick kira";
+    }
+}
